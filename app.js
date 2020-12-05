@@ -1,9 +1,15 @@
-//move active in html between panels for js functionality to work
-const panels = document.querySelectorAll('.panel')
-panels.forEach(panel => {
-    panel.addEventListener('click', () => {
-        //active will be attached to clicked
-        //and its class
-        panel.classList.add('active')
+// SELECT ELEMENT
+const panels = document.querySelectorAll('.panel');
+
+// LOOP THROUGH EACH PANEL & ADD EVENT LISTENER
+panels.forEach(e => {
+    e.addEventListener('click', () => {
+        removeClassList()
+        e.classList.add('active')
     })
-})
+});
+
+// ADD FUNCTION TO REMOVE CLASS LIST
+function removeClassList() {
+    panels.forEach(p => p.classList.remove('active'))
+}
