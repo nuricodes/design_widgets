@@ -10,9 +10,7 @@ let tracker = 0;
 // increment for next
 next.addEventListener('click', () => {
     tracker++
-
     tracker > circles.length ? tracker = circles.length : tracker;
-
     update()
 })
 
